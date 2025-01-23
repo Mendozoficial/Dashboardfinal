@@ -1,0 +1,515 @@
+<<<<<<< HEAD
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative; /* Añadido para posicionar el botón de modo nocturno */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Asegura que el botón esté sobre el contenido */
+}
+
+.dark-mode-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode #moon-icon {
+    filter: invert(1); /* Cambia el color del icono de la luna */
+}
+
+body.dark-mode .container {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .login-section {
+    border-right: 1px solid #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .forgot-password,
+body.dark-mode .create-account p a {
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+body.dark-mode input[type="email"], 
+body.dark-mode input[type="password"] {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-mode .social-login {
+    background-color: #555;
+    color: #fff;
+    border: none;
+}
+
+body.dark-mode .google {
+    background-color: #db4437;
+}
+
+body.dark-mode .facebook {
+    background-color: #4267B2;
+}
+
+body.dark-mode button[type="submit"] {
+    background-color: #0056b3;
+}
+
+.login-section, .graphic-section {
+    flex: 1;
+    padding: 40px;
+    position: relative; /* Añadido para posicionar la capa superpuesta */
+}
+
+.login-section {
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #fff; /* Cambiando el color del texto a blanco */
+}
+
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-login img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.facebook {
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.or-email {
+    text-align: center;
+    color: #666;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.forgot-password {
+    margin-top: 10px; /* Separar el texto del botón */
+}
+
+.forgot-password, .create-account p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover, .create-account p a:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.graphic-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url('./img/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.graphic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura con transparencia */
+    z-index: 1;
+}
+
+.graphic-section > * {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+
+.graphic-section h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .login-section {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .graphic-section {
+        display: none; /* Oculta la sección gráfica en pantallas pequeñas */
+    }
+}
+=======
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative; /* Añadido para posicionar el botón de modo nocturno */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Asegura que el botón esté sobre el contenido */
+}
+
+.dark-mode-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode #moon-icon {
+    filter: invert(1); /* Cambia el color del icono de la luna */
+}
+
+body.dark-mode .container {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .login-section {
+    border-right: 1px solid #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .forgot-password,
+body.dark-mode .create-account p a {
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+body.dark-mode input[type="email"], 
+body.dark-mode input[type="password"] {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-mode .social-login {
+    background-color: #555;
+    color: #fff;
+    border: none;
+}
+
+body.dark-mode .google {
+    background-color: #db4437;
+}
+
+body.dark-mode .facebook {
+    background-color: #4267B2;
+}
+
+body.dark-mode button[type="submit"] {
+    background-color: #0056b3;
+}
+
+.login-section, .graphic-section {
+    flex: 1;
+    padding: 40px;
+    position: relative; /* Añadido para posicionar la capa superpuesta */
+}
+
+.login-section {
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #fff; /* Cambiando el color del texto a blanco */
+}
+
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-login img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.facebook {
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.or-email {
+    text-align: center;
+    color: #666;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.forgot-password {
+    margin-top: 10px; /* Separar el texto del botón */
+}
+
+.forgot-password, .create-account p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover, .create-account p a:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.graphic-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url('./img/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.graphic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura con transparencia */
+    z-index: 1;
+}
+
+.graphic-section > * {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+
+.graphic-section h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .login-section {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .graphic-section {
+        display: none; /* Oculta la sección gráfica en pantallas pequeñas */
+    }
+}
+>>>>>>> af90722d7b5704d1e3be10b5c22af4e1f436cd77

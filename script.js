@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         auth.signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // Inicio de sesión exitoso
-                window.location.href = '../paginas/pagina-privada.html';
+                window.location.href = 'paginas/pagina-privada.html';
             })
             .catch((error) => {
                 console.error('Error al iniciar sesión:', error);
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     // Registro exitoso
-                    window.location.href = '../paginas/pagina-privada.html';
+                    window.location.href = 'paginas/pagina-privada.html';
                 })
                 .catch((error) => {
                     console.error('Error al registrarse:', error);
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider)
             .then((result) => {
-                window.location.href = '../paginas/pagina-privada.html';
+                window.location.href = 'paginas/pagina-privada.html';
             })
             .catch((error) => {
                 console.error('Error al iniciar sesión con Google:', error);
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const provider = new firebase.auth.FacebookAuthProvider();
         auth.signInWithPopup(provider)
             .then((result) => {
-                window.location.href = '../paginas/pagina-privada.html';
+                window.location.href = 'paginas/pagina-privada.html';
             })
             .catch((error) => {
             console.error('Error al iniciar sesión con Facebook:', error);
@@ -116,6 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificación del estado de autenticación
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = '../paginas/login.html'; // Redirige a la página de login si no está autenticado
+            window.location.href = 'paginas/login.html'; // Redirige a la página de login si no está autenticado
         }
     });
